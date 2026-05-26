@@ -1,0 +1,331 @@
+{
+    "key": "group_692fec67d6b35",
+    "title": "Tekst | Categorieën",
+    "fields": [
+        {
+            "key": "field_692fec682cb73",
+            "label": "(Column 6\/12)",
+            "name": "",
+            "aria-label": "",
+            "type": "acfe_column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "columns": "6\/12",
+            "endpoint": 0,
+            "allow_in_bindings": 1
+        },
+        {
+            "key": "field_692fedb32cb76",
+            "label": "Label",
+            "name": "label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_692fecfa2cb75",
+            "label": "Tekst",
+            "name": "txt",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 1,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_692fee092cb77",
+            "label": "Link",
+            "name": "link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 1
+        },
+        {
+            "key": "field_692fecf52cb74",
+            "label": "(Column 6\/12)",
+            "name": "",
+            "aria-label": "",
+            "type": "acfe_column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "columns": "6\/12",
+            "endpoint": 0,
+            "allow_in_bindings": 1
+        },
+        {
+            "key": "field_692feefc2cb79",
+            "label": "Categorieën",
+            "name": "categories",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_repeater_stylised_button": 0,
+            "layout": "block",
+            "pagination": 0,
+            "min": 2,
+            "max": 4,
+            "collapsed": "",
+            "button_label": "Nieuwe rij",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_692ff47dca51d",
+                    "label": "Categorie",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "accordion",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "open": 0,
+                    "multi_expand": 0,
+                    "endpoint": 0,
+                    "parent_repeater": "field_692feefc2cb79"
+                },
+                {
+                    "key": "field_692fef582cb7a",
+                    "label": "Tekst categorie",
+                    "name": "txt_cat",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "allow_in_bindings": 1,
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0,
+                    "parent_repeater": "field_692feefc2cb79"
+                },
+                {
+                    "key": "field_692fefe62cb7b",
+                    "label": "Link categorie",
+                    "name": "link_cat",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_692feefc2cb79"
+                },
+                {
+                    "key": "field_69452579d1e06",
+                    "label": "Hover Animatie kleur 1",
+                    "name": "gradient_color_1",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "Selecteer een kleur voor de animatie die verschijnt wanneer de muis over de categorie verschijnt",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#0070BA",
+                    "enable_opacity": 0,
+                    "return_format": "string",
+                    "allow_in_bindings": 0,
+                    "show_custom_palette": 1,
+                    "palette_colors": "#0070BA,#00A0DF,#D8D900,#6DB52C,#883677,#FB3640",
+                    "show_color_wheel": 0,
+                    "custom_palette_source": "",
+                    "parent_repeater": "field_692feefc2cb79"
+                },
+                {
+                    "key": "field_6945260cd1e07",
+                    "label": "Hover Animatie kleur 2",
+                    "name": "gradient_color_2",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "Selecteer een kleur voor de animatie die verschijnt wanneer de muis over de categorie verschijnt",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#6DB52C",
+                    "enable_opacity": 0,
+                    "return_format": "string",
+                    "allow_in_bindings": 0,
+                    "show_custom_palette": 1,
+                    "palette_colors": "#0070BA,#00A0DF,#D8D900,#6DB52C,#883677,#FB3640",
+                    "show_color_wheel": 0,
+                    "custom_palette_source": "",
+                    "parent_repeater": "field_692feefc2cb79"
+                },
+                {
+                    "key": "field_6945260dd1e08",
+                    "label": "Hover Animatie kleur 3",
+                    "name": "gradient_color_3",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "Selecteer een kleur voor de animatie die verschijnt wanneer de muis over de categorie verschijnt",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#D8D900",
+                    "enable_opacity": 0,
+                    "return_format": "string",
+                    "allow_in_bindings": 0,
+                    "show_custom_palette": 1,
+                    "palette_colors": "#0070BA,#00A0DF,#D8D900,#6DB52C,#883677,#FB3640",
+                    "show_color_wheel": 0,
+                    "custom_palette_source": "",
+                    "parent_repeater": "field_692feefc2cb79"
+                },
+                {
+                    "key": "field_69452610d1e09",
+                    "label": "Hover Animatie kleur 4",
+                    "name": "gradient_color_4",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "Selecteer een kleur voor de animatie die verschijnt wanneer de muis over de categorie verschijnt",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#00A0DF",
+                    "enable_opacity": 0,
+                    "return_format": "string",
+                    "allow_in_bindings": 0,
+                    "show_custom_palette": 1,
+                    "palette_colors": "#0070BA,#00A0DF,#D8D900,#6DB52C,#883677,#FB3640",
+                    "show_color_wheel": 0,
+                    "custom_palette_source": "",
+                    "parent_repeater": "field_692feefc2cb79"
+                }
+            ]
+        },
+        {
+            "key": "field_692ff52ae825f",
+            "label": "Categorieën Endpoint",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": {
+        "acfcloneindex": {
+            "acfe_meta_key": "",
+            "acfe_meta_value": ""
+        }
+    },
+    "acfe_note": "",
+    "modified": 1766139571
+}
