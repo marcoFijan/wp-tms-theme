@@ -1,0 +1,182 @@
+{
+  "key": "group_69f33bd907ed3",
+  "title": "Inhoud - Vacature",
+  "fields": [
+    {
+      "key": "field_69f33dbed57b4",
+      "label": "(Column 6\/12)",
+      "name": "",
+      "aria-label": "",
+      "type": "acfe_column",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "columns": "6\/12",
+      "endpoint": 0,
+      "allow_in_bindings": 0
+    },
+    {
+      "key": "field_69f33bd9bd949",
+      "label": "Afbeelding (751 x 520)",
+      "name": "img",
+      "aria-label": "",
+      "type": "image",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "uploader": "",
+      "return_format": "id",
+      "library": "all",
+      "acfe_thumbnail": 1,
+      "min_width": "",
+      "min_height": "",
+      "min_size": "",
+      "max_width": "",
+      "max_height": "",
+      "max_size": "",
+      "mime_types": "",
+      "allow_in_bindings": 0,
+      "preview_size": "landscape-md"
+    },
+    {
+      "key": "field_69f33dcad57b5",
+      "label": "(Column 6\/12)",
+      "name": "",
+      "aria-label": "",
+      "type": "acfe_column",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "columns": "6\/12",
+      "endpoint": 0,
+      "allow_in_bindings": 0
+    },
+    {
+      "key": "field_69f33c6fd57b1",
+      "label": "Aantal uur",
+      "name": "hours",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "allow_in_bindings": 0,
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_69f342202f8bc",
+      "label": "",
+      "name": "",
+      "aria-label": "",
+      "type": "message",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "message": "Functienaam wordt hier automatisch als titel weergegeven",
+      "new_lines": "wpautop",
+      "esc_html": 0
+    },
+    {
+      "key": "field_69f33d19d57b2",
+      "label": "Tekst",
+      "name": "txt",
+      "aria-label": "",
+      "type": "wysiwyg",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "allow_in_bindings": 0,
+      "tabs": "all",
+      "toolbar": "full",
+      "media_upload": 1,
+      "delay": 0
+    },
+    {
+      "key": "field_69f33d62d57b3",
+      "label": "Tekst onder",
+      "name": "txt_footer",
+      "aria-label": "",
+      "type": "wysiwyg",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Geïnteresseerd? Kom gezellig een keer langs voor een kop koffie of stuur je motivatie en CV naar <a href=\"mailto:soliciteren@website.nl\">solliciteren@website.nl<\/a>",
+      "allow_in_bindings": 0,
+      "tabs": "all",
+      "toolbar": "full",
+      "media_upload": 1,
+      "delay": 0
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "vacancy"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "acf_after_title",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": ["the_content"],
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "display_title": "Inhoud",
+  "allow_ai_access": false,
+  "ai_description": "",
+  "acfe_autosync": ["json"],
+  "acfe_form": 0,
+  "acfe_meta": {
+    "acfcloneindex": {
+      "acfe_meta_key": "",
+      "acfe_meta_value": ""
+    }
+  },
+  "acfe_note": "",
+  "modified": 1777549893
+}
