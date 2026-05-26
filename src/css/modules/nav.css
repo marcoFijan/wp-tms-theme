@@ -1,0 +1,146 @@
+/* ─────────────────────────────────────────────
+   * NAV BUTTON
+   * ───────────────────────────────────────────── */
+
+.nav-button {
+	@apply text-md from-green via-light-blue to-blue relative inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-gradient-to-br px-6 py-4 leading-(--line-height-normal) text-white lg:w-max lg:flex-row-reverse;
+}
+
+/* INNER GLOW RING */
+.nav-button::after {
+	content: "";
+	@apply bg-dark-blue/80 absolute inset-(--height-2px) rounded-full transition-colors duration-300;
+}
+
+.nav-button:hover::after {
+	@apply bg-dark-blue;
+}
+
+/* TRIANGLE INDICATOR */
+.nav-button::before {
+	content: "";
+	@apply pointer-events-none absolute left-1/2 z-50 h-4 w-5 -translate-x-1/2 bg-white opacity-0 transition-all duration-300;
+	bottom: -3.75rem;
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* ─────────────────────────────────────────────
+   * TEXT
+   * ───────────────────────────────────────────── */
+
+.nav-button__text {
+	@apply relative z-10 font-normal;
+}
+
+.nav-button[aria-expanded="true"] .nav-button__text {
+	@apply w-fit bg-clip-text text-transparent;
+	background-image: var(--purple-gradient);
+}
+
+/* ─────────────────────────────────────────────
+   * BURGER ICON (3 LINES)
+   * ───────────────────────────────────────────── */
+
+.nav-button__burger {
+	@apply h-2px relative z-10 block w-[0.6875rem] bg-white transition-all duration-300;
+}
+
+/* top + bottom lines */
+.nav-button__burger::before,
+.nav-button__burger::after {
+	content: "";
+	@apply h-2px absolute left-0 w-full bg-white transition-all duration-300;
+}
+
+.nav-button__burger::before {
+	top: -0.25rem;
+}
+
+.nav-button__burger::after {
+	top: 0.25rem;
+}
+
+/* ─────────────────────────────────────────────
+   * OPEN STATE (HAMBURGER → X)
+   * ───────────────────────────────────────────── */
+
+.nav-button[aria-expanded="true"] .nav-button__burger {
+	@apply bg-transparent;
+}
+
+.nav-button[aria-expanded="true"] .nav-button__burger::before {
+	@apply bg-blue;
+	top: 0;
+	transform: rotate(45deg);
+}
+
+.nav-button[aria-expanded="true"] .nav-button__burger::after {
+	@apply bg-blue;
+	top: 0;
+	transform: rotate(-45deg);
+}
+
+.nav-button[aria-expanded="true"] + section #mobile-menu-header {
+	@apply !mt-0;
+}
+
+/* ─────────────────────────────────────────────
+   * OPEN STATE (BUTTON)
+   * ───────────────────────────────────────────── */
+
+.nav-button[aria-expanded="true"] {
+	@apply hidden from-white via-white to-white lg:flex;
+}
+
+.nav-button[aria-expanded="true"]::after {
+	@apply bg-transparent;
+}
+
+.nav-button[aria-expanded="true"]::before {
+	@apply -bottom-9 opacity-100;
+}
+
+/* ─────────────────────────────────────────────
+	 * MOBILE HAMBURGER
+	 * ───────────────────────────────────────────── */
+/* hamburger.css */
+.hamburger-line {
+	@apply h-hamburger-line relative z-50 block w-6 bg-white transition-all duration-300 lg:hidden;
+}
+
+.hamburger-line::before {
+	content: "";
+	@apply h-hamburger-line absolute -top-2 left-0 w-full bg-white transition-all duration-300;
+}
+
+.hamburger-line::after {
+	content: "";
+	@apply h-hamburger-line absolute top-2 left-0 w-full bg-white transition-all duration-300;
+}
+
+#hamburger[aria-expanded="true"] .hamburger-line {
+	@apply bg-transparent;
+}
+
+#hamburger[aria-expanded="true"] .hamburger-line::before {
+	@apply bg-dark-blue top-0 rotate-45;
+}
+
+#hamburger[aria-expanded="true"] .hamburger-line::after {
+	@apply bg-dark-blue top-0 -rotate-45;
+}
+
+.mobile-menu {
+	@apply translate-x-full transition-transform duration-300 lg:translate-x-0;
+}
+
+.mobile-menu[data-open="true"] {
+	@apply translate-x-0;
+}
+
+/* ─────────────────────────────────────────────
+	 * Menu overlay
+	 * ───────────────────────────────────────────── */
+.menu-overlay {
+	@apply after:pointer-events-none after:fixed after:inset-0 after:z-20 after:hidden after:bg-black/30 after:backdrop-blur-sm after:transition-opacity after:duration-300 after:lg:block;
+}

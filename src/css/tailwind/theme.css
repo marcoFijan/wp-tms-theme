@@ -1,0 +1,113 @@
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-icons-filled: "Material Symbols Filled", sans-serif;
+  --font-icons: "Material Symbols", sans-serif;
+
+  --breakpoint-sm: 36rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 62rem;
+  --breakpoint-xl: 75rem;
+  --breakpoint-2xl: 87.5rem;
+  --breakpoint-3xl: 120rem;
+
+  --text-5xl: 3.0625rem;
+  --text-4xl: 2.125rem;
+  --text-3xl: 1.6875rem;
+  --text-2xl: 1.3125rem;
+  --text-xl: 1.1875rem;
+  --text-lg: 1.125rem;
+  --text-lm: 1.0625rem;
+  --text-md: 0.9375rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.8125rem;
+  --text-xxs: 0.75rem;
+  --text-tiny: 0.625rem;
+  --text-icon: 1.375rem;
+
+  --radius-tiny: 0.5rem;
+  --radius-xs: 0.75rem;
+  --radius-sm: 1rem;
+  --radius-md: 1.5rem;
+  --radius-lg: 2rem;
+  --radius-xl: 2.5rem;
+  --radius-2xl: 5rem;
+  --radius-3xl: 7.5rem;
+  --radius-full: 9999rem;
+
+  --tracking-2xl: 0.0375rem;
+  --tracking-xl: 0.0375rem;
+  --tracking-l: 0.0338rem;
+  --tracking-md: 0.0288rem;
+  --tracking-sm: 0.0262rem;
+  --tracking-xs: 0.0225rem;
+  --tracking-tiny: 0.0206rem;
+
+  --line-height-tight: 1.1;
+  --line-height-normal: 1.2;
+  --line-height-loose: 1.5;
+
+  --aspect-support: 1.174;
+
+  --blur-lg: 5rem;
+
+  --height-header: 6rem;
+  --height-header-lg: 7rem;
+  --height-hamburger-line: 0.125rem;
+  --max-height-unset: unset;
+
+  --width-double: 200%;
+  --max-width-unset: unset;
+  --max-width-double: 200%;
+
+  --gap-xl: 5rem;
+  --gap-lg: 4rem;
+  --gap-md: 2rem;
+  --gap-grid: 1.5rem;
+  --grid-cols-auto-fit: repeat(auto-fit, minmax(20rem, 1fr));
+
+  --margin-header-offset: var(--height-header);
+  --margin-header-offset-lg: var(--height-header-lg);
+  --margin-full: 100%;
+  --margin-double: 200%;
+
+  --padding-container: 1.5rem;
+  --padding-header-offset: var(--height-header);
+  --padding-header-offset-lg: var(--height-header-lg);
+
+  --height-screen: 100dvh;
+  --height-2px: 2px;
+  --height-footer-accordion: 0.625rem;
+
+  --width-double-screen-height: 200vh;
+  --width-faq-accordion: 0.625rem;
+
+  --grid-cols-auto-fit-12: repeat(auto-fit, minmax(12rem, 1fr));
+
+  --color-dark-blue: oklch(27.44% 0.057 243.47);
+  --color-blue: oklch(53.58% 0.144 248.04);
+  --color-green: oklch(69.35% 0.169 155.9);
+  --color-light-green: oklch(69.97% 0.18 133.72);
+  --color-light-grey: oklch(97.01% 0.009 242.84);
+  --color-light-blue: oklch(66.69% 0.143 235.6);
+  --color-grey: oklch(67.13% 0.015 241.06);
+  --color-yellow: oklch(85.61% 0.187 110.11);
+  --color-purple: oklch(46.94% 0.138 336.4);
+  --color-red: oklch(64.53% 0.23 24.39);
+  --color-white: oklch(100% 0 0);
+  --color-blur: oklch(0.165 0 0 / 0.102);
+
+  --green-gradient: linear-gradient(135deg, var(--color-yellow) 0%, var(--color-light-green) 30.93%, var(--color-light-blue) 61.39%, var(--color-blue) 93.72%);
+  --purple-gradient: linear-gradient(90deg, var(--color-blue) -0.59%, var(--color-purple) 51.21%, var(--color-red) 99.99%);
+  --white-gradient: linear-gradient(135deg, var(--color-white) 0%, var(--color-white) 100%);
+
+  --shadow-t-section: 0px -30px 30px 0px oklch(0.0191 0.0396 212.5 / 0.078);
+  --shadow-section: 0px 0px 80px 0px oklch(0.0191 0.0396 212.5 / 0.078);
+  --shadow-card: 0px 0px 60px 0px oklch(0.0191 0.0396 212.5 / 0.078);
+  --shadow-card-dark: 0px 0px 60px 0px oklch(0.0191 0.0396 212.5 / 0.278);
+  --shadow-b-card: 0px 30px 60px 0px oklch(0.0191 0.0396 212.5 / 0.078);
+}
+
+/* Needed for javascript */
+:root {
+  --tw-lg: var(--breakpoint-lg);
+}

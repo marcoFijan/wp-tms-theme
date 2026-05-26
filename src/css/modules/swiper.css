@@ -1,0 +1,95 @@
+@import "../../../node_modules/swiper/swiper.css";
+/* Using CSS becaus of limited tailwind perspective support */
+
+.swiper-container.gallery {
+	perspective: 1200px;
+	perspective-origin: center center;
+	overflow: visible;
+}
+
+.swiper-container.gallery .swiper-wrapper {
+	transform-style: preserve-3d;
+}
+
+.swiper-container.gallery .swiper-slide {
+	transition:
+		transform 0.6s ease,
+		filter 0.6s ease,
+		opacity 0.6s ease;
+	transform-origin: center center;
+	transform-style: preserve-3d;
+}
+
+.swiper-container.gallery .swiper-slide-active {
+	transform: translateZ(0) rotateY(0deg) !important;
+	/* opacity: 1; */
+	filter: brightness(100%);
+	z-index: 2;
+}
+
+.swiper-container.gallery .swiper-slide-prev {
+	transform: translateX(-20%) translateZ(-200px) rotateY(45deg) scale(1.2);
+	opacity: 1;
+	filter: brightness(50%);
+	z-index: 1;
+}
+
+.swiper-container.gallery .swiper-slide-next {
+	transform: translateX(20%) translateZ(-200px) rotateY(-45deg) scale(1.2);
+	opacity: 1;
+	filter: brightness(50%);
+	z-index: 1;
+}
+
+.swiper-container.gallery .swiper-navigation-icon {
+	display: none;
+}
+
+.swiper-container.gallery .swiper-slide.is-far-left {
+	transform: translateX(-100%) translateZ(-400px);
+	opacity: 0;
+	pointer-events: none;
+}
+
+.swiper-container.gallery .swiper-slide.is-far-right {
+	transform: translateX(100%) translateZ(-400px);
+	opacity: 0;
+	pointer-events: none;
+}
+
+.swiper-container.gallery .swiper-slide img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	border-radius: 12px;
+}
+
+.swiper-container .swiper-pagination {
+	display: flex;
+	gap: 0.25rem;
+	padding: 0.25rem;
+	border-radius: 10rem;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.swiper-container .swiper-pagination .swiper-pagination-bullet {
+	background: var(--color-light-grey);
+	width: 0.5rem;
+	height: 0.5rem;
+	display: block;
+	border-radius: 50%;
+	opacity: 0.5;
+	transition: all ease-in-out 0.2s;
+}
+
+.swiper-container .swiper-pagination .swiper-pagination-bullet:hover {
+	background: var(--color-white);
+	opacity: 0.75;
+}
+
+.swiper-container
+	.swiper-pagination
+	.swiper-pagination-bullet.swiper-pagination-bullet-active {
+	background: var(--color-white);
+	opacity: 1;
+}

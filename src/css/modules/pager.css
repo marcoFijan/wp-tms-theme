@@ -1,0 +1,52 @@
+nav.pagination ul.page-numbers {
+	@apply flex justify-center gap-2;
+}
+
+nav.pagination li a {
+	@apply hover:border-dark-blue text-dark-blue bg-light-grey border-dark-blue/0 flex h-12 w-12 items-center justify-center rounded-full border transition-colors duration-300;
+}
+
+nav.pagination li:has(.page-numbers.current) {
+	@apply text-md from-green via-light-blue to-blue text-dark-blue pointer-events-none relative box-border inline-flex aspect-square h-12 w-12 cursor-pointer items-center justify-center gap-2 rounded-full bg-gradient-to-br;
+}
+
+nav.pagination li:has(.page-numbers.current)::after {
+	content: "";
+	@apply absolute inset-[1px] rounded-full bg-white transition-colors duration-300;
+}
+
+nav.pagination li:has(.page-numbers.current:hover::after) {
+	@apply bg-light-grey;
+}
+
+nav.pagination li .page-numbers.current {
+	@apply relative z-30 font-bold;
+}
+
+nav.pagination a.page-numbers.prev,
+nav.pagination a.page-numbers.next {
+	@apply hover:border-dark-blue -tracking-md bg-dark-blue text-light-grey group-hover:bg-light-grey group-hover:text-dark-blue hover:bg-light-grey hover:text-dark-blue box-border flex w-fit cursor-pointer items-center gap-2 rounded-full border border-transparent px-6 py-4 text-xs leading-none font-medium no-underline transition-colors duration-300;
+}
+
+nav.pagination a.page-numbers.prev {
+	@apply mr-4;
+}
+
+nav.pagination a.page-numbers.next {
+	@apply ml-4;
+}
+
+nav.pagination .page-numbers.prev:hover span,
+nav.pagination .page-numbers.next:hover span {
+	@apply -rotate-45;
+}
+
+nav.pagination .prevPlaceholder,
+nav.pagination .nextPlaceholder {
+	@apply hidden lg:flex;
+}
+
+nav.pagination:has(a.page-numbers.prev) .prevPlaceholder,
+nav.pagination:has(a.page-numbers.next) .nextPlaceholder {
+	@apply hidden;
+}

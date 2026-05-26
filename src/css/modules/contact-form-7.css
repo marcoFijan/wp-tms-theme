@@ -1,0 +1,149 @@
+.primary-contact form > .form-group.width-full {
+	@apply col-span-2;
+}
+
+.wpcf7 {
+	@apply w-full;
+}
+
+form {
+	@apply gap-x-grid grid w-full grid-cols-2;
+
+	/* Only form-group elements act as grid items */
+	> .form-group {
+		@apply col-span-2 xl:col-span-1 xl:w-full;
+	}
+
+	/* Non-form-group direct children span full width */
+	> :not(.form-group) {
+		@apply col-span-2;
+	}
+
+	.wpcf7-not-valid-tip {
+		@apply text-red mt-1 block;
+	}
+
+	.wpcf7-response-output {
+		@apply text-dark-blue mt-4 block px-8 py-[1.125rem];
+	}
+
+	.wpcf7-response-output:empty {
+		@apply hidden;
+	}
+
+	/* Form groups */
+	.form-group {
+		@apply relative mb-4 w-full;
+
+		/* Float label ONLY when focused or when value exists */
+		&:focus-within label,
+		&:has(input:not(:placeholder-shown)) label,
+		&:has(textarea:not(:placeholder-shown)) label {
+			@apply top-4 text-xs;
+		}
+
+		&.form-file {
+			@apply relative;
+
+			&:has(.wpcf7-not-valid-tip) {
+				.field-wrapper {
+					@apply border-red-600;
+				}
+			}
+
+			.field-wrapper {
+				@apply border border-dashed border-white/30 px-8 py-[1.75rem] transition-colors;
+				&.file-added {
+					@apply border-green-600;
+				}
+				&.hovering {
+					@apply bg-green-600/20;
+				}
+				.field-inner {
+					@apply flex items-center justify-between;
+				}
+			}
+
+			label {
+				@apply font-black;
+			}
+
+			.wpcf7-not-valid-tip {
+				@apply mt-2;
+			}
+
+			.wpcf7-form-control-wrap {
+				input,
+				textarea {
+					@apply absolute inset-0 cursor-pointer border-none p-0 opacity-0;
+				}
+			}
+		}
+
+		&.form-acceptance {
+			@apply mt-2 flex items-center gap-3;
+
+			.wpcf7-form-control-wrap {
+				@apply flex items-start;
+			}
+
+			.wpcf7-acceptance {
+				@apply flex items-start;
+			}
+
+			.wpcf7-list-item {
+				@apply flex items-start text-left;
+			}
+
+			label {
+				@apply text-dark-blue relative !top-0 m-0 flex cursor-pointer items-center gap-3 px-0 text-sm;
+			}
+
+			input[type="checkbox"] {
+				@apply bg-light-grey relative m-0 h-4 w-4 shrink-0 cursor-pointer appearance-none rounded-full border p-0 transition-all;
+
+				&:checked {
+					@apply bg-dark-blue;
+
+					&:before {
+						@apply font-icons text-light-grey absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xs leading-none font-bold content-['check'];
+					}
+				}
+			}
+		}
+
+		label {
+			@apply text-grey absolute top-7 left-0 px-6 text-sm transition-all;
+		}
+	}
+
+	input,
+	textarea,
+	select {
+		@apply border-light-grey bg-light-grey focus:border-dark-blue [&.wpcf7-not-valid]:border-red block w-full rounded-sm border px-6 pt-8 pb-4 font-bold transition-all outline-none placeholder:text-transparent focus:bg-white;
+	}
+
+	/* General checkbox/radio styling (not in form-acceptance) */
+	input[type="checkbox"]:not(.form-acceptance input[type="checkbox"]),
+	input[type="radio"] {
+		@apply size-4 appearance-none border border-white/30 bg-transparent bg-center bg-no-repeat transition-all;
+
+		&:checked {
+			@apply border-white bg-white;
+			background-image: url("../../assets/media/check.svg");
+			background-size: 60% 60%;
+		}
+	}
+
+	.form-submit {
+		@apply relative w-max;
+
+		.wpcf7-submit {
+			@apply bg-dark-blue hover:bg-light-grey text-md hover:text-dark-blue relative z-10 mt-4 w-max cursor-pointer rounded-full px-6 py-4 text-center leading-none font-normal text-white transition-all duration-200 disabled:pointer-events-none disabled:text-transparent;
+		}
+
+		.wpcf7-spinner {
+			@apply absolute top-[calc(50%-0.75rem)] left-[calc(50%-0.75rem)] z-0 size-6 animate-spin rounded-full border-2 border-t-white border-r-transparent border-b-white border-l-white opacity-0 before:content-none;
+		}
+	}
+}
